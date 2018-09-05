@@ -1,0 +1,26 @@
+server:
+  port:8090
+
+spring:
+  profiles:
+    active: product
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521:orcl
+    username: da_ji
+    password: da_ji
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: UTC
+  thymeleaf:
+    prefix:classpath:/templates/
+    suffix:.html
+    mode:HTML5
+    encoding:UTF-8
+    content-type:text/html
+    cache:false
+    
